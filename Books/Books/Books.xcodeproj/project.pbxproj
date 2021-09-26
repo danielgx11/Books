@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		506DB54B26F022A000F84627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB54A26F022A000F84627 /* AppDelegate.swift */; };
 		506DB54D26F022A000F84627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB54C26F022A000F84627 /* SceneDelegate.swift */; };
-		506DB54F26F022A000F84627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB54E26F022A000F84627 /* ViewController.swift */; };
-		506DB55226F022A000F84627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506DB55026F022A000F84627 /* Main.storyboard */; };
 		506DB55526F022A000F84627 /* Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 506DB55326F022A000F84627 /* Books.xcdatamodeld */; };
 		506DB55726F022A300F84627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506DB55626F022A300F84627 /* Assets.xcassets */; };
 		506DB55A26F022A300F84627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506DB55826F022A300F84627 /* LaunchScreen.storyboard */; };
 		506DB56526F022A300F84627 /* BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56426F022A300F84627 /* BooksTests.swift */; };
 		506DB57026F022A400F84627 /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56F26F022A400F84627 /* BooksUITests.swift */; };
 		506DB57F26F024D100F84627 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 506DB57E26F024D100F84627 /* Swinject */; };
-		506DB58226F025BB00F84627 /* SwiftGenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 506DB58126F025BB00F84627 /* SwiftGenKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +38,6 @@
 		506DB54726F022A000F84627 /* Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		506DB54A26F022A000F84627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506DB54C26F022A000F84627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		506DB54E26F022A000F84627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		506DB55126F022A000F84627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		506DB55426F022A000F84627 /* Books.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Books.xcdatamodel; sourceTree = "<group>"; };
 		506DB55626F022A300F84627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		506DB55926F022A300F84627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				506DB58226F025BB00F84627 /* SwiftGenKit in Frameworks */,
 				506DB57F26F024D100F84627 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,11 +99,8 @@
 		506DB54926F022A000F84627 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				506DB54A26F022A000F84627 /* AppDelegate.swift */,
-				506DB54C26F022A000F84627 /* SceneDelegate.swift */,
-				506DB54E26F022A000F84627 /* ViewController.swift */,
-				506DB55026F022A000F84627 /* Main.storyboard */,
-				506DB55626F022A300F84627 /* Assets.xcassets */,
+				507566B227011829007D4956 /* Delegates */,
+				507566B32701182F007D4956 /* Assets */,
 				506DB55826F022A300F84627 /* LaunchScreen.storyboard */,
 				506DB55B26F022A300F84627 /* Info.plist */,
 				506DB55326F022A000F84627 /* Books.xcdatamodeld */,
@@ -135,6 +126,23 @@
 			path = BooksUITests;
 			sourceTree = "<group>";
 		};
+		507566B227011829007D4956 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				506DB54A26F022A000F84627 /* AppDelegate.swift */,
+				506DB54C26F022A000F84627 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		507566B32701182F007D4956 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				506DB55626F022A300F84627 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,7 +161,6 @@
 			name = Books;
 			packageProductDependencies = (
 				506DB57E26F024D100F84627 /* Swinject */,
-				506DB58126F025BB00F84627 /* SwiftGenKit */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -228,7 +235,6 @@
 			mainGroup = 506DB53E26F022A000F84627;
 			packageReferences = (
 				506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */,
-				506DB58026F025BB00F84627 /* XCRemoteSwiftPackageReference "SwiftGen" */,
 			);
 			productRefGroup = 506DB54826F022A000F84627 /* Products */;
 			projectDirPath = "";
@@ -248,7 +254,6 @@
 			files = (
 				506DB55A26F022A300F84627 /* LaunchScreen.storyboard in Resources */,
 				506DB55726F022A300F84627 /* Assets.xcassets in Resources */,
-				506DB55226F022A000F84627 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				506DB55526F022A000F84627 /* Books.xcdatamodeld in Sources */,
-				506DB54F26F022A000F84627 /* ViewController.swift in Sources */,
 				506DB54B26F022A000F84627 /* AppDelegate.swift in Sources */,
 				506DB54D26F022A000F84627 /* SceneDelegate.swift in Sources */,
 			);
@@ -312,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		506DB55026F022A000F84627 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				506DB55126F022A000F84627 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		506DB55826F022A300F84627 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -619,14 +615,6 @@
 				minimumVersion = 2.8.0;
 			};
 		};
-		506DB58026F025BB00F84627 /* XCRemoteSwiftPackageReference "SwiftGen" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftGen/SwiftGen.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.4.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -634,11 +622,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		506DB58126F025BB00F84627 /* SwiftGenKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 506DB58026F025BB00F84627 /* XCRemoteSwiftPackageReference "SwiftGen" */;
-			productName = SwiftGenKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 
