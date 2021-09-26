@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Common">
+   </FileRef>
+   <FileRef
+      location = "group:AppNavigation">
+   </FileRef>
+   <FileRef
+      location = "group:BooksUI">
+   </FileRef>
+   <FileRef
+      location = "group:Domain">
+   </FileRef>
+   <FileRef
+      location = "group:DataManager">
+   </FileRef>
+   <FileRef
+      location = "group:Storage">
+   </FileRef>
+   <FileRef
+      location = "group:Networking">
+   </FileRef>
+   <FileRef
+      location = "group:DI">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Features">
+   </Group>
+   <FileRef
+      location = "group:Books/Books.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Libraries">
+   </Group>
+</Workspace>
