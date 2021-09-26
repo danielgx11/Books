@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50485EC727011C2400419393 /* AppNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC627011C2400419393 /* AppNavigation */; };
+		50485EC927011C3000419393 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC827011C3000419393 /* Common */; };
+		50485ECB27011C3300419393 /* DI in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECA27011C3300419393 /* DI */; };
+		50485ECD27011C4500419393 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECC27011C4500419393 /* Domain */; };
+		50485ECF27011C4900419393 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECE27011C4900419393 /* Networking */; };
+		50485ED127011C4E00419393 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ED027011C4E00419393 /* Storage */; };
+		50485ED327011C6200419393 /* BooksUI in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ED227011C6200419393 /* BooksUI */; };
+		50485ED527011C7600419393 /* DataManager in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ED427011C7600419393 /* DataManager */; };
 		506DB54B26F022A000F84627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB54A26F022A000F84627 /* AppDelegate.swift */; };
 		506DB54D26F022A000F84627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB54C26F022A000F84627 /* SceneDelegate.swift */; };
 		506DB55526F022A000F84627 /* Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 506DB55326F022A000F84627 /* Books.xcdatamodeld */; };
@@ -55,7 +63,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50485ECF27011C4900419393 /* Networking in Frameworks */,
+				50485ECD27011C4500419393 /* Domain in Frameworks */,
+				50485ED527011C7600419393 /* DataManager in Frameworks */,
+				50485ED127011C4E00419393 /* Storage in Frameworks */,
+				50485ED327011C6200419393 /* BooksUI in Frameworks */,
+				50485EC727011C2400419393 /* AppNavigation in Frameworks */,
 				506DB57F26F024D100F84627 /* Swinject in Frameworks */,
+				50485EC927011C3000419393 /* Common in Frameworks */,
+				50485ECB27011C3300419393 /* DI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50485EC527011C2400419393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		506DB53E26F022A000F84627 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,7 @@
 				506DB56326F022A300F84627 /* BooksTests */,
 				506DB56E26F022A400F84627 /* BooksUITests */,
 				506DB54826F022A000F84627 /* Products */,
+				50485EC527011C2400419393 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +185,14 @@
 			name = Books;
 			packageProductDependencies = (
 				506DB57E26F024D100F84627 /* Swinject */,
+				50485EC627011C2400419393 /* AppNavigation */,
+				50485EC827011C3000419393 /* Common */,
+				50485ECA27011C3300419393 /* DI */,
+				50485ECC27011C4500419393 /* Domain */,
+				50485ECE27011C4900419393 /* Networking */,
+				50485ED027011C4E00419393 /* Storage */,
+				50485ED227011C6200419393 /* BooksUI */,
+				50485ED427011C7600419393 /* DataManager */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -618,6 +650,38 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		50485EC627011C2400419393 /* AppNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppNavigation;
+		};
+		50485EC827011C3000419393 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
+		50485ECA27011C3300419393 /* DI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DI;
+		};
+		50485ECC27011C4500419393 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		50485ECE27011C4900419393 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		50485ED027011C4E00419393 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
+		50485ED227011C6200419393 /* BooksUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BooksUI;
+		};
+		50485ED427011C7600419393 /* DataManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataManager;
+		};
 		506DB57E26F024D100F84627 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */;
