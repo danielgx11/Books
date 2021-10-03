@@ -23,6 +23,7 @@
 		506DB56526F022A300F84627 /* BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56426F022A300F84627 /* BooksTests.swift */; };
 		506DB57026F022A400F84627 /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56F26F022A400F84627 /* BooksUITests.swift */; };
 		506DB57F26F024D100F84627 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 506DB57E26F024D100F84627 /* Swinject */; };
+		50E51611270A6C10003E20B2 /* OxeNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 50E51610270A6C10003E20B2 /* OxeNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50485ECF27011C4900419393 /* Networking in Frameworks */,
+				50E51611270A6C10003E20B2 /* OxeNetworking in Frameworks */,
 				50485ECD27011C4500419393 /* Domain in Frameworks */,
 				50485ED527011C7600419393 /* DataManager in Frameworks */,
 				50485ED127011C4E00419393 /* Storage in Frameworks */,
@@ -241,6 +243,7 @@
 				50485ED027011C4E00419393 /* Storage */,
 				50485ED227011C6200419393 /* BooksUI */,
 				50485ED427011C7600419393 /* DataManager */,
+				50E51610270A6C10003E20B2 /* OxeNetworking */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -315,6 +318,7 @@
 			mainGroup = 506DB53E26F022A000F84627;
 			packageReferences = (
 				506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */,
+				50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */,
 			);
 			productRefGroup = 506DB54826F022A000F84627 /* Products */;
 			projectDirPath = "";
@@ -530,7 +534,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4Y5B2V5Z;
-				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_FILE = Books/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +553,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4Y5B2V5Z;
-				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_FILE = Books/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,6 +699,14 @@
 				minimumVersion = 2.8.0;
 			};
 		};
+		50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adrianod1as/OxeNetworking-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -734,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		50E51610270A6C10003E20B2 /* OxeNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */;
+			productName = OxeNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 
