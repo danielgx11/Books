@@ -123,11 +123,10 @@
 		506DB54926F022A000F84627 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				507566B227011829007D4956 /* Delegates */,
-				507566B32701182F007D4956 /* Assets */,
-				506DB55826F022A300F84627 /* LaunchScreen.storyboard */,
-				506DB55B26F022A300F84627 /* Info.plist */,
-				506DB55326F022A000F84627 /* Books.xcdatamodeld */,
+				50BAFBBD270685FF004063B0 /* Models */,
+				50BAFBBE27068609004063B0 /* Views */,
+				50BAFBBF2706861A004063B0 /* ViewModels */,
+				50BAFBBC270685D5004063B0 /* SupportingFiles */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -165,6 +164,55 @@
 				506DB55626F022A300F84627 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		50BAFBBA270685C5004063B0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				506DB55326F022A000F84627 /* Books.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		50BAFBBB270685CD004063B0 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				506DB55826F022A300F84627 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		50BAFBBC270685D5004063B0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				50BAFBBB270685CD004063B0 /* Launch */,
+				507566B227011829007D4956 /* Delegates */,
+				50BAFBBA270685C5004063B0 /* CoreData */,
+				507566B32701182F007D4956 /* Assets */,
+				506DB55B26F022A300F84627 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		50BAFBBD270685FF004063B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50BAFBBE27068609004063B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50BAFBBF2706861A004063B0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
