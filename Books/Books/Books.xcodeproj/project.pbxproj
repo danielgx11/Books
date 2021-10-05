@@ -10,7 +10,6 @@
 		50485EC727011C2400419393 /* AppNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC627011C2400419393 /* AppNavigation */; };
 		50485EC927011C3000419393 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC827011C3000419393 /* Common */; };
 		50485ECB27011C3300419393 /* DI in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECA27011C3300419393 /* DI */; };
-		50485ECD27011C4500419393 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECC27011C4500419393 /* Domain */; };
 		50485ECF27011C4900419393 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECE27011C4900419393 /* Networking */; };
 		50485ED127011C4E00419393 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ED027011C4E00419393 /* Storage */; };
 		50485ED327011C6200419393 /* BooksUI in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ED227011C6200419393 /* BooksUI */; };
@@ -24,6 +23,7 @@
 		506DB57026F022A400F84627 /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56F26F022A400F84627 /* BooksUITests.swift */; };
 		506DB57F26F024D100F84627 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 506DB57E26F024D100F84627 /* Swinject */; };
 		50E51611270A6C10003E20B2 /* OxeNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 50E51610270A6C10003E20B2 /* OxeNetworking */; };
+		50E5161F270A7A8A003E20B2 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 50E5161E270A7A8A003E20B2 /* Domain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E5161F270A7A8A003E20B2 /* Domain in Frameworks */,
 				50485ECF27011C4900419393 /* Networking in Frameworks */,
 				50E51611270A6C10003E20B2 /* OxeNetworking in Frameworks */,
-				50485ECD27011C4500419393 /* Domain in Frameworks */,
 				50485ED527011C7600419393 /* DataManager in Frameworks */,
 				50485ED127011C4E00419393 /* Storage in Frameworks */,
 				50485ED327011C6200419393 /* BooksUI in Frameworks */,
@@ -227,6 +227,7 @@
 				506DB54326F022A000F84627 /* Sources */,
 				506DB54426F022A000F84627 /* Frameworks */,
 				506DB54526F022A000F84627 /* Resources */,
+				50E51616270A6F5B003E20B2 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -238,12 +239,12 @@
 				50485EC627011C2400419393 /* AppNavigation */,
 				50485EC827011C3000419393 /* Common */,
 				50485ECA27011C3300419393 /* DI */,
-				50485ECC27011C4500419393 /* Domain */,
 				50485ECE27011C4900419393 /* Networking */,
 				50485ED027011C4E00419393 /* Storage */,
 				50485ED227011C6200419393 /* BooksUI */,
 				50485ED427011C7600419393 /* DataManager */,
 				50E51610270A6C10003E20B2 /* OxeNetworking */,
+				50E5161E270A7A8A003E20B2 /* Domain */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -319,6 +320,7 @@
 			packageReferences = (
 				506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */,
 				50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */,
+				50E51617270A7289003E20B2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 506DB54826F022A000F84627 /* Products */;
 			projectDirPath = "";
@@ -356,6 +358,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50E51616270A6F5B003E20B2 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint --config ../.swiftlint.yml\nelse\necho \"warning: SwiftLint not installed, 'brew install swiftlint' or download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		506DB54326F022A000F84627 /* Sources */ = {
@@ -462,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -517,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -535,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4Y5B2V5Z;
 				INFOPLIST_FILE = Books/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4Y5B2V5Z;
 				INFOPLIST_FILE = Books/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +732,14 @@
 				minimumVersion = 0.2.2;
 			};
 		};
+		50E51617270A7289003E20B2 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.43.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -721,10 +754,6 @@
 		50485ECA27011C3300419393 /* DI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DI;
-		};
-		50485ECC27011C4500419393 /* Domain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
 		};
 		50485ECE27011C4900419393 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -751,6 +780,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */;
 			productName = OxeNetworking;
+		};
+		50E5161E270A7A8A003E20B2 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 
