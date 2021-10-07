@@ -43,7 +43,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50333ACD270D1B9A003A0226 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		50333AD1270D1BE6003A0226 /* AppNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationTests.swift; sourceTree = "<group>"; };
+		50333AD2270D1BE6003A0226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50333AD3270D1BE6003A0226 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		50333AD4270D1BE6003A0226 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		50333AD7270D1BE6003A0226 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		50333ADD270D1BE6003A0226 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		50333AE1270D1BF2003A0226 /* AppNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationTests.swift; sourceTree = "<group>"; };
+		50333AE2270D1BF2003A0226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50333AE3270D1BF2003A0226 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		50333AE4270D1BF2003A0226 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		50333AE7270D1BF2003A0226 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		50333AED270D1BF2003A0226 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		50333AF1270D1BFD003A0226 /* AppNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationTests.swift; sourceTree = "<group>"; };
+		50333AF2270D1BFD003A0226 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50333AF3270D1BFD003A0226 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		50333AF4270D1BFD003A0226 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		50333AF7270D1BFD003A0226 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		50333AFD270D1BFD003A0226 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
 		506DB54726F022A000F84627 /* Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		506DB54A26F022A000F84627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506DB54C26F022A000F84627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +125,264 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50333ACE270D1BE6003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333ACF270D1BE6003A0226 /* Tests */,
+				50333AD2270D1BE6003A0226 /* README.md */,
+				50333AD3270D1BE6003A0226 /* .gitignore */,
+				50333AD4270D1BE6003A0226 /* Package.swift */,
+				50333AD5270D1BE6003A0226 /* Sources */,
+				50333AD8270D1BE6003A0226 /* .swiftpm */,
+			);
+			name = AppNavigation;
+			path = ../AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333ACF270D1BE6003A0226 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AD0270D1BE6003A0226 /* AppNavigationTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		50333AD0270D1BE6003A0226 /* AppNavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AD1270D1BE6003A0226 /* AppNavigationTests.swift */,
+			);
+			path = AppNavigationTests;
+			sourceTree = "<group>";
+		};
+		50333AD5270D1BE6003A0226 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				50333AD6270D1BE6003A0226 /* AppNavigation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		50333AD6270D1BE6003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333AD7270D1BE6003A0226 /* AppNavigation.swift */,
+			);
+			path = AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333AD8270D1BE6003A0226 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				50333AD9270D1BE6003A0226 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		50333AD9270D1BE6003A0226 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				50333ADA270D1BE6003A0226 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		50333ADA270D1BE6003A0226 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				50333ADB270D1BE6003A0226 /* danielgomes.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		50333ADB270D1BE6003A0226 /* danielgomes.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				50333ADC270D1BE6003A0226 /* xcschemes */,
+			);
+			path = danielgomes.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		50333ADC270D1BE6003A0226 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				50333ADD270D1BE6003A0226 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		50333ADE270D1BF2003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333ADF270D1BF2003A0226 /* Tests */,
+				50333AE2270D1BF2003A0226 /* README.md */,
+				50333AE3270D1BF2003A0226 /* .gitignore */,
+				50333AE4270D1BF2003A0226 /* Package.swift */,
+				50333AE5270D1BF2003A0226 /* Sources */,
+				50333AE8270D1BF2003A0226 /* .swiftpm */,
+			);
+			name = AppNavigation;
+			path = ../AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333ADF270D1BF2003A0226 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AE0270D1BF2003A0226 /* AppNavigationTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		50333AE0270D1BF2003A0226 /* AppNavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AE1270D1BF2003A0226 /* AppNavigationTests.swift */,
+			);
+			path = AppNavigationTests;
+			sourceTree = "<group>";
+		};
+		50333AE5270D1BF2003A0226 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				50333AE6270D1BF2003A0226 /* AppNavigation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		50333AE6270D1BF2003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333AE7270D1BF2003A0226 /* AppNavigation.swift */,
+			);
+			path = AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333AE8270D1BF2003A0226 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				50333AE9270D1BF2003A0226 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		50333AE9270D1BF2003A0226 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				50333AEA270D1BF2003A0226 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		50333AEA270D1BF2003A0226 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				50333AEB270D1BF2003A0226 /* danielgomes.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		50333AEB270D1BF2003A0226 /* danielgomes.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				50333AEC270D1BF2003A0226 /* xcschemes */,
+			);
+			path = danielgomes.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		50333AEC270D1BF2003A0226 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				50333AED270D1BF2003A0226 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		50333AEE270D1BFD003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333AEF270D1BFD003A0226 /* Tests */,
+				50333AF2270D1BFD003A0226 /* README.md */,
+				50333AF3270D1BFD003A0226 /* .gitignore */,
+				50333AF4270D1BFD003A0226 /* Package.swift */,
+				50333AF5270D1BFD003A0226 /* Sources */,
+				50333AF8270D1BFD003A0226 /* .swiftpm */,
+			);
+			name = AppNavigation;
+			path = ../AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333AEF270D1BFD003A0226 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AF0270D1BFD003A0226 /* AppNavigationTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		50333AF0270D1BFD003A0226 /* AppNavigationTests */ = {
+			isa = PBXGroup;
+			children = (
+				50333AF1270D1BFD003A0226 /* AppNavigationTests.swift */,
+			);
+			path = AppNavigationTests;
+			sourceTree = "<group>";
+		};
+		50333AF5270D1BFD003A0226 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				50333AF6270D1BFD003A0226 /* AppNavigation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		50333AF6270D1BFD003A0226 /* AppNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				50333AF7270D1BFD003A0226 /* AppNavigation.swift */,
+			);
+			path = AppNavigation;
+			sourceTree = "<group>";
+		};
+		50333AF8270D1BFD003A0226 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				50333AF9270D1BFD003A0226 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		50333AF9270D1BFD003A0226 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				50333AFA270D1BFD003A0226 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		50333AFA270D1BFD003A0226 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				50333AFB270D1BFD003A0226 /* danielgomes.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		50333AFB270D1BFD003A0226 /* danielgomes.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				50333AFC270D1BFD003A0226 /* xcschemes */,
+			);
+			path = danielgomes.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		50333AFC270D1BFD003A0226 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				50333AFD270D1BFD003A0226 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
 		50485EC527011C2400419393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +393,9 @@
 		506DB53E26F022A000F84627 = {
 			isa = PBXGroup;
 			children = (
+				50333ACE270D1BE6003A0226 /* AppNavigation */,
+				50333ADE270D1BF2003A0226 /* AppNavigation */,
+				50333AEE270D1BFD003A0226 /* AppNavigation */,
 				506DB54926F022A000F84627 /* Books */,
 				506DB56326F022A300F84627 /* BooksTests */,
 				506DB56E26F022A400F84627 /* BooksUITests */,
@@ -228,6 +520,7 @@
 				506DB54426F022A000F84627 /* Frameworks */,
 				506DB54526F022A000F84627 /* Resources */,
 				50E51616270A6F5B003E20B2 /* Swiftlint */,
+				50333ACD270D1B9A003A0226 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
