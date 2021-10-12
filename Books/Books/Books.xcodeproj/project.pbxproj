@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50485EC727011C2400419393 /* AppNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC627011C2400419393 /* AppNavigation */; };
+		503CED5C2715E8FB0028C57A /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 503CED5B2715E8FB0028C57A /* Login */; };
+		503CED5F2715EACE0028C57A /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 503CED5E2715EACE0028C57A /* SwinjectAutoregistration */; };
+		503CED612715EB380028C57A /* AppNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 503CED602715EB380028C57A /* AppNavigation */; };
 		50485EC927011C3000419393 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 50485EC827011C3000419393 /* Common */; };
 		50485ECB27011C3300419393 /* DI in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECA27011C3300419393 /* DI */; };
 		50485ECF27011C4900419393 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 50485ECE27011C4900419393 /* Networking */; };
@@ -95,16 +97,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503CED5C2715E8FB0028C57A /* Login in Frameworks */,
 				50E5161F270A7A8A003E20B2 /* Domain in Frameworks */,
+				503CED612715EB380028C57A /* AppNavigation in Frameworks */,
 				50485ECF27011C4900419393 /* Networking in Frameworks */,
 				50E51611270A6C10003E20B2 /* OxeNetworking in Frameworks */,
 				50485ED527011C7600419393 /* DataManager in Frameworks */,
 				50485ED127011C4E00419393 /* Storage in Frameworks */,
 				50485ED327011C6200419393 /* BooksUI in Frameworks */,
-				50485EC727011C2400419393 /* AppNavigation in Frameworks */,
 				506DB57F26F024D100F84627 /* Swinject in Frameworks */,
 				50485EC927011C3000419393 /* Common in Frameworks */,
 				50485ECB27011C3300419393 /* DI in Frameworks */,
+				503CED5F2715EACE0028C57A /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +533,6 @@
 			name = Books;
 			packageProductDependencies = (
 				506DB57E26F024D100F84627 /* Swinject */,
-				50485EC627011C2400419393 /* AppNavigation */,
 				50485EC827011C3000419393 /* Common */,
 				50485ECA27011C3300419393 /* DI */,
 				50485ECE27011C4900419393 /* Networking */,
@@ -538,6 +541,9 @@
 				50485ED427011C7600419393 /* DataManager */,
 				50E51610270A6C10003E20B2 /* OxeNetworking */,
 				50E5161E270A7A8A003E20B2 /* Domain */,
+				503CED5B2715E8FB0028C57A /* Login */,
+				503CED5E2715EACE0028C57A /* SwinjectAutoregistration */,
+				503CED602715EB380028C57A /* AppNavigation */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -614,6 +620,7 @@
 				506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */,
 				50E5160F270A6C10003E20B2 /* XCRemoteSwiftPackageReference "OxeNetworking-iOS" */,
 				50E51617270A7289003E20B2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				503CED5D2715EACE0028C57A /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
 			productRefGroup = 506DB54826F022A000F84627 /* Products */;
 			projectDirPath = "";
@@ -859,7 +866,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielgx.ios.Books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -879,7 +886,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielgx.ios.Books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1009,6 +1016,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		503CED5D2715EACE0028C57A /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.0;
+			};
+		};
 		506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -1036,7 +1051,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		50485EC627011C2400419393 /* AppNavigation */ = {
+		503CED5B2715E8FB0028C57A /* Login */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Login;
+		};
+		503CED5E2715EACE0028C57A /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 503CED5D2715EACE0028C57A /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		503CED602715EB380028C57A /* AppNavigation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppNavigation;
 		};
