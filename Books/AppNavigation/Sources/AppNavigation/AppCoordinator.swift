@@ -24,15 +24,16 @@ public class AppCoordinator: Coordinator {
     public let window: UIWindow
 
     // MARK: - Initializers
-    public init(container: Container, window: UIWindow) {
+    public init(container: Container, window: UIWindow, navigationController: UINavigationController?) {
         self.container = container
         self.window = window
-        self.navigationController = UINavigationController()
+        self.navigationController = navigationController ?? UINavigationController()
     }
 
     // MARK: - Methods
     public func start() {
         // TODO: make custom nav bar and set up here
+        self.navigationController.asBooksNavigationController()
         window.rootViewController = self.navigationController
         window.makeKeyAndVisible()
         Common.FontFamily.registerAllCustomFonts()
@@ -47,3 +48,26 @@ public class AppCoordinator: Coordinator {
 
 // MARK: - LoginDepartingCoordinator
 extension AppCoordinator: LoginDepartingCoordinator { }
+
+// TODO: improve it on Common
+extension UINavigationController {
+
+    func asBooksNavigationController() {
+        self.navigationBar.asBooksNavigationBar()
+    }
+}
+
+extension UINavigationBar {
+
+    func asBooksNavigationBar() {
+        self.tintColor = ColorName.marineBlue
+        self.backgroundColor = .white
+        self.isTranslucent = false
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.shadowImage = UIImage()
+//        let font = FontFamily.RubikMedium.regular.font(size: 18)
+//        self.titleTextAttributes = [.foregroundColor: ColorName.marineBlue, .font: font]
+//        self.backIndicatorImage = Asset.back.image.alwaysTemplate
+//        self.backIndicatorTransitionMaskImage = Asset.back.image.alwaysTemplate
+    }
+}

@@ -8,7 +8,6 @@
 import Common
 import UIKit
 import Swinject
-import SwinjectAutoregistration
 
 public protocol LoginDepartingCoordinator: AnyObject { }
 
@@ -30,7 +29,7 @@ public class LoginCoordinator: Router {
 
     // MARK: - Methods
     public func start() {
-        navigate(to: viewController(.login), asTopViewController: false, modifying: nil, completion: nil)
+        navigate(to: viewController(.login), asTopViewController: true, modifying: nil, completion: nil)
     }
 
     public enum Route: Destination, CaseIterable {
@@ -43,5 +42,13 @@ public class LoginCoordinator: Router {
         case .login:
             return container.resolveSafe(LoginViewController.self)
         }
+    }
+}
+
+// MARK: - LoginSceneCoordinating
+extension LoginCoordinator: LoginSceneCoordinating {
+
+    public func showHome() {
+        // TODO: navigation
     }
 }
