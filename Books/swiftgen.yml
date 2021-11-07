@@ -13,10 +13,10 @@ xcassets:
         params: 
           publicAccess: true
 fonts:
-  - inputs: Common/Sources/Common/Resources/Fonts
+  - inputs: Books/Books/SupportingFiles/Fonts
     outputs:
       - templateName: swift5
-        output: Common/Sources/Common/Helpers/Constants/Generated/SwiftGenFonts.swift
+        output: Books/Books/Helpers/Constants/Generated/SwiftGenFonts.swift
         params: 
           publicAccess: true
 strings:

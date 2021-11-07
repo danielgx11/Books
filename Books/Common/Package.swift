@@ -25,7 +25,6 @@ let package = Package(
             dependencies: ["Swinject"],
             resources:
                 [
-                    .copy("Resources/Fonts"),
                     .copy("Resources/Colors"),
                     .copy("Resources/Localizable.strings")
                 ]),

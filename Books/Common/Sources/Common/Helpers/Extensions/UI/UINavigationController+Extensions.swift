@@ -9,6 +9,10 @@ import UIKit
 
 public extension UINavigationController {
 
+    func asBooksNavigationController() {
+        self.navigationBar.asBooksNavigationBar()
+    }
+
     func popToRootWithHandler(completion: (() -> Void)?) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)

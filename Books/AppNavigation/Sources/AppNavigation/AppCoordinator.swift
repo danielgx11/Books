@@ -48,26 +48,3 @@ public class AppCoordinator: Coordinator {
 
 // MARK: - LoginDepartingCoordinator
 extension AppCoordinator: LoginDepartingCoordinator { }
-
-// TODO: improve it on Common
-extension UINavigationController {
-
-    func asBooksNavigationController() {
-        self.navigationBar.asBooksNavigationBar()
-    }
-}
-
-extension UINavigationBar {
-
-    func asBooksNavigationBar() {
-        self.tintColor = ColorName.marineBlue
-        self.backgroundColor = .white
-        self.isTranslucent = false
-        self.setBackgroundImage(UIImage(), for: .default)
-        self.shadowImage = UIImage()
-//        let font = FontFamily.RubikMedium.regular.font(size: 18)
-//        self.titleTextAttributes = [.foregroundColor: ColorName.marineBlue, .font: font]
-//        self.backIndicatorImage = Asset.back.image.alwaysTemplate
-//        self.backIndicatorTransitionMaskImage = Asset.back.image.alwaysTemplate
-    }
-}
