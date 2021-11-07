@@ -15,7 +15,7 @@ public extension UINavigationBar {
         self.isTranslucent = false
         self.setBackgroundImage(UIImage(), for: .default)
         self.shadowImage = UIImage()
-        let font = FontFamily.RubikMedium.regular.font(size: 18)
+        let font = FontFamily.RubikMedium.regular.font(size: ScreenSize.returnOnSmall(16, or: 18))
         self.titleTextAttributes = [.foregroundColor: ColorName.marineBlue, .font: font]
     }
 }
