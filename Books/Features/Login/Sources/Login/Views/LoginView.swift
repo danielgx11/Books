@@ -24,6 +24,10 @@ public class LoginView: UIView {
 
     private lazy var headerTitle: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
+        label.textColor = .white
+        label.font = FontFamily.RubikMedium.regular.font(size: ScreenSize.returnOnSmall(24, or: 26))
+        label.text = L10n.Login.Header.Label.title
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -36,18 +40,22 @@ public class LoginView: UIView {
 
     private lazy var footerTitle: UILabel = {
         let label = UILabel()
+        label.font = FontFamily.RubikMedium.regular.font(size: ScreenSize.returnOnSmall(16, or: 18))
+        label.text = L10n.Login.Footer.Label.title
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
+        textField.placeholder = L10n.Login.Placeholder.email
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
 
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
+        textField.placeholder = L10n.Login.Placeholder.password
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -55,12 +63,19 @@ public class LoginView: UIView {
 
     private lazy var signInButton: UIButton = {
         let button = UIButton()
+        button.backgroundColor = ColorName.manatee
+        button.titleLabel?.textColor = ColorName.white
+        button.setTitle(L10n.Login.Button.signIn, for: .normal)
+        button.layer.cornerRadius = ScreenSize.returnOnSmall(20, or: 24)
+        button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
-    private lazy var footerStackView: UIStackView = {
+    private lazy var textFieldsStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.spacing = 8
+        stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -99,7 +114,9 @@ extension LoginView {
         setupHeaderViewConstraints()
         setupFooterViewConstraints()
         setupHeaderTitleConstraints()
-        setupFooterStackViewContraints()
+        setupFooterTitleConstraints()
+        setupSignInButtonConstraints()
+        setupTextFieldsStackViewContraints()
     }
 
     private func setupHierarchy() {
@@ -108,18 +125,18 @@ extension LoginView {
 
         headerView.addSubview(headerTitle)
 
-        footerView.addSubview(footerStackView)
+        footerView.addSubview(footerTitle)
+        footerView.addSubview(textFieldsStackView)
+        footerView.addSubview(signInButton)
 
-        footerStackView.addArrangedSubview(footerTitle)
-        footerStackView.addArrangedSubview(emailTextField)
-        footerStackView.addArrangedSubview(passwordTextField)
-        footerStackView.addArrangedSubview(signInButton)
+        textFieldsStackView.addArrangedSubview(emailTextField)
+        textFieldsStackView.addArrangedSubview(passwordTextField)
     }
 
     private func setupHeaderViewConstraints() {
         NSLayoutConstraint.activate(
             [
-                headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+                headerView.topAnchor.constraint(equalTo: topAnchor),
                 headerView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
                 headerView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
                 headerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2)
@@ -141,20 +158,42 @@ extension LoginView {
     private func setupHeaderTitleConstraints() {
         NSLayoutConstraint.activate(
             [
-                headerTitle.centerXAnchor.constraint(equalTo: centerXAnchor),
-                headerTitle.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 296/360),
+                headerTitle.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+                headerTitle.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 296/360),
                 headerTitle.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -24)
             ]
         )
     }
 
-    private func setupFooterStackViewContraints() {
+    private func setupFooterTitleConstraints() {
         NSLayoutConstraint.activate(
             [
-                footerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                footerStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 296/360),
-                footerView.topAnchor.constraint(equalTo: footerView.bottomAnchor, constant: 24),
-                footerView.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -32)
+                footerTitle.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+                footerTitle.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 296/360),
+                footerTitle.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 16),
+                footerTitle.heightAnchor.constraint(equalToConstant: 24)
+            ]
+        )
+    }
+
+    private func setupSignInButtonConstraints() {
+        NSLayoutConstraint.activate(
+            [
+                signInButton.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+                signInButton.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 296/360),
+                signInButton.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -24),
+                signInButton.heightAnchor.constraint(equalToConstant: ScreenSize.returnOnSmall(48, or: 64)),
+            ]
+        )
+    }
+
+    private func setupTextFieldsStackViewContraints() {
+        NSLayoutConstraint.activate(
+            [
+                textFieldsStackView.centerXAnchor.constraint(equalTo: footerView.centerXAnchor),
+                textFieldsStackView.widthAnchor.constraint(equalTo: footerView.widthAnchor, multiplier: 296/360),
+                textFieldsStackView.topAnchor.constraint(equalTo: footerTitle.bottomAnchor, constant: 16),
+                textFieldsStackView.heightAnchor.constraint(equalToConstant: 104)
             ]
         )
     }

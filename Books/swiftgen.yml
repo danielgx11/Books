@@ -26,3 +26,9 @@ strings:
         output: Common/Sources/Common/Helpers/Constants/Generated/SwiftGenStrings.swift
         params: 
           publicAccess: true
+  - inputs: Features/Login/Sources/Login/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Features/Login/Sources/Login/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
