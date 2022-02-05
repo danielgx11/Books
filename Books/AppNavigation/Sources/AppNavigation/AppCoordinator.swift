@@ -41,10 +41,10 @@ public class AppCoordinator: Coordinator {
     }
 
     private func showWelcome() {
-        let coordinator = container ~> (LoginCoordinator.self)
-        coordinator.start()
+        let router = container ~> (LoginRouter.self)
+        router.start()
     }
 }
 
-// MARK: - LoginDepartingCoordinator
-extension AppCoordinator: LoginDepartingCoordinator { }
+// MARK: - LoginDepartingRouter
+extension AppCoordinator: LoginDepartingRouter { }

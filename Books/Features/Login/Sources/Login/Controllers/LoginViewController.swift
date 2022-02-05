@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 import Domain
 
-public protocol LoginViewModeling {
+public protocol LoginDisplayLogic: AnyObject {
 
-    func signIn(withCredentials credentials: Credentials)
+    func showHome()
+}
+
+public protocol LoginRoutingLogic {
+
+    func showHome()
 }
 
 public class LoginViewController: UIViewController {
@@ -23,7 +28,8 @@ public class LoginViewController: UIViewController {
     }()
 
     // MARK: Instances
-    public var loginViewModel: LoginViewModeling?
+    public weak var interactor: LoginBusinessLogic?
+    public var router: LoginRoutingLogic?
 
     // MARK: - Life Cycle
     public override func loadView() {
@@ -48,7 +54,16 @@ extension LoginViewController {
 
     private func setupSignIn() {
         loginView.didTapLogin = { [weak self] in
-            self?.loginViewModel?.signIn(withCredentials: $0)
+            self?.interactor?.signIn(withCredentials: $0)
         }
+    }
+}
+
+
+// MARK: - LoginDisplayLogic
+extension LoginViewController: LoginDisplayLogic {
+
+    public func showHome() {
+        router?.showHome()
     }
 }

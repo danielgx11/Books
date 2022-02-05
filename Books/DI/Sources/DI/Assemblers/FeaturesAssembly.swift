@@ -20,13 +20,20 @@ class FeaturesAssembly: Assembly {
 extension FeaturesAssembly {
 
     private func assembleLogin(container: Container) {
-        let coordinator = container.resolveSafe(LoginCoordinator.self)
-        container.register(LoginSceneCoordinating.self) { _ in coordinator }
-        container.autoregister(LoginViewModeling.self, initializer: LoginViewModel.init)
+        let router = container.resolveSafe(LoginRouter.self)
+        container.autoregister(LoginPresentationLogic.self, initializer: LoginPresenter.init)
+        container.register(LoginRoutingLogic.self) { _ in router }
+        container.register(LoginBusinessLogic.self) {
+            let presenter = $0.resolveSafe(LoginPresentationLogic.self)
+            let interactor = LoginInteractor(presenter: presenter)
+
+            return interactor
+        }
 
         container.register(LoginViewController.self) {
             let controller = LoginViewController()
-            controller.loginViewModel = $0.resolveSafe(LoginViewModeling.self)
+            controller.interactor = $0.resolveSafe(LoginBusinessLogic.self)
+            controller.router = $0.resolveSafe(LoginRoutingLogic.self)
 
             return controller
         }

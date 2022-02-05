@@ -22,8 +22,8 @@ public class CoordinatorsFactory: DependencyFactory {
 // MARK: - AppCoordinatorsFactoryProtocol
 extension CoordinatorsFactory: CoordinatorFactory {
 
-    public func makeLoginCoordinator() -> LoginCoordinator {
-        resolver.resolveSafe(LoginCoordinator.self)
+    public func makeLoginRouter() -> LoginRouter {
+        resolver.resolveSafe(LoginRouter.self)
     }
 }
 

@@ -25,8 +25,9 @@ class ViewControllersFactory: DependencyFactory {
 extension ViewControllersFactory: LoginViewControllerFactory {
 
     func registerLoginViewController() {
-        let controller = LoginViewController()
-        let viewModel = resolver.resolveSafe(LoginViewModel.self)
-        controller.loginViewModel = viewModel
+        // TODO: Remove unnecessary methods
+//        let controller = LoginViewController()
+//        let viewModel = resolver.resolveSafe(LoginViewModel.self)
+//        controller.loginViewModel = viewModel
     }
 }

@@ -10,5 +10,5 @@ import Login
 
 public protocol CoordinatorFactory: DependencyFactory {
 
-    func makeLoginCoordinator() -> LoginCoordinator
+    func makeLoginRouter() -> LoginRouter
 }

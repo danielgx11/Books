@@ -1,17 +1,17 @@
 //
-//  LoginCoordinator.swift
+//  LoginRouter.swift
 //  
 //
-//  Created by Daniel Gomes on 12/10/21.
+//  Created by Daniel Gomes on 05/02/22.
 //
 
 import Common
 import UIKit
 import Swinject
 
-public protocol LoginDepartingCoordinator: AnyObject { }
+public protocol LoginDepartingRouter { }
 
-public class LoginCoordinator: Router {
+public class LoginRouter: Router {
 
     // MARK: - Properties
     weak public var coordinatorDelegate: CoordinatorDelegate?
@@ -19,9 +19,9 @@ public class LoginCoordinator: Router {
     public var childCoordinators: [Coordinator] = []
     public var navigationController: UINavigationController
     public var container: Container
-    public var departingCoordinator: LoginDepartingCoordinator
+    public var departingCoordinator: LoginDepartingRouter
 
-    public init(container: Container, navigationController: UINavigationController, departingCoordinator: LoginDepartingCoordinator) {
+    public init(container: Container, navigationController: UINavigationController, departingCoordinator: LoginDepartingRouter) {
         self.container = container
         self.navigationController = navigationController
         self.departingCoordinator = departingCoordinator
@@ -45,8 +45,8 @@ public class LoginCoordinator: Router {
     }
 }
 
-// MARK: - LoginSceneCoordinating
-extension LoginCoordinator: LoginSceneCoordinating {
+// MARK: - LoginRoutingLogic
+extension LoginRouter: LoginRoutingLogic {
 
     public func showHome() {
         // TODO: navigation

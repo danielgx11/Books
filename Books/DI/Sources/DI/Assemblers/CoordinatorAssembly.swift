@@ -44,10 +44,10 @@ extension CoordinatorAssembly {
 
     func assembleLoginCoordinator(container: Container) {
         let appCoordinator = container.resolveSafe(AppCoordinator.self)
-        container.register(LoginCoordinator.self) { _ in
-            LoginCoordinator(container: container,
-                             navigationController: appCoordinator.navigationController,
-                             departingCoordinator: appCoordinator)
+        container.register(LoginRouter.self) { _ in
+            LoginRouter(container: container,
+                        navigationController: appCoordinator.navigationController,
+                        departingCoordinator: appCoordinator)
         }
     }
 }

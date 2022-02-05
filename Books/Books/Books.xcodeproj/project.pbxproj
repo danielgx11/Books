@@ -24,6 +24,7 @@
 		506DB57026F022A400F84627 /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB56F26F022A400F84627 /* BooksUITests.swift */; };
 		506DB57F26F024D100F84627 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 506DB57E26F024D100F84627 /* Swinject */; };
 		507C61DF27306DFE000E295F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C61DE27306DFE000E295F /* SceneDelegate.swift */; };
+		508BB8FB274BD33100539B4C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 508BB8FA274BD33100539B4C /* IQKeyboardManagerSwift */; };
 		50B74B5027388D5700CDB0CB /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B74B4627388D5600CDB0CB /* Rubik-BoldItalic.ttf */; };
 		50B74B5127388D5700CDB0CB /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B74B4727388D5600CDB0CB /* Rubik-MediumItalic.ttf */; };
 		50B74B5227388D5700CDB0CB /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B74B4827388D5600CDB0CB /* Rubik-Regular.ttf */; };
@@ -123,6 +124,7 @@
 				503CED612715EB380028C57A /* AppNavigation in Frameworks */,
 				503CED632715F8BC0028C57A /* Common in Frameworks */,
 				50485ECF27011C4900419393 /* Networking in Frameworks */,
+				508BB8FB274BD33100539B4C /* IQKeyboardManagerSwift in Frameworks */,
 				50485ED527011C7600419393 /* DataManager in Frameworks */,
 				50485ED127011C4E00419393 /* Storage in Frameworks */,
 				50485ED327011C6200419393 /* BooksUI in Frameworks */,
@@ -606,6 +608,7 @@
 				503CED5E2715EACE0028C57A /* SwinjectAutoregistration */,
 				503CED602715EB380028C57A /* AppNavigation */,
 				503CED622715F8BC0028C57A /* Common */,
+				508BB8FA274BD33100539B4C /* IQKeyboardManagerSwift */,
 			);
 			productName = Books;
 			productReference = 506DB54726F022A000F84627 /* Books.app */;
@@ -682,6 +685,7 @@
 				506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */,
 				50E51617270A7289003E20B2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				503CED5D2715EACE0028C57A /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				508BB8F9274BD33100539B4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 506DB54826F022A000F84627 /* Products */;
 			projectDirPath = "";
@@ -1104,6 +1108,14 @@
 				minimumVersion = 2.8.0;
 			};
 		};
+		508BB8F9274BD33100539B4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		50E51617270A7289003E20B2 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/SwiftLint";
@@ -1156,6 +1168,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 506DB57D26F024D100F84627 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		508BB8FA274BD33100539B4C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 508BB8F9274BD33100539B4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		50E5161E270A7A8A003E20B2 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
