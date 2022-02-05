@@ -13,10 +13,10 @@ xcassets:
         params: 
           publicAccess: true
 fonts:
-  - inputs: Common/Sources/Common/Resources/Fonts
+  - inputs: Books/Books/SupportingFiles/Fonts
     outputs:
       - templateName: swift5
-        output: Common/Sources/Common/Helpers/Constants/Generated/SwiftGenFonts.swift
+        output: Books/Books/Helpers/Constants/Generated/SwiftGenFonts.swift
         params: 
           publicAccess: true
 strings:
@@ -24,5 +24,11 @@ strings:
     outputs:
       - templateName: structured-swift5
         output: Common/Sources/Common/Helpers/Constants/Generated/SwiftGenStrings.swift
+        params: 
+          publicAccess: true
+  - inputs: Features/Login/Sources/Login/Resources/Localizable.strings
+    outputs:
+      - templateName: structured-swift5
+        output: Features/Login/Sources/Login/Helpers/Constants/Generated/SwiftGenStrings.swift
         params: 
           publicAccess: true

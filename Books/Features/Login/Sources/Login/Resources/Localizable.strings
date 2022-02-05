@@ -1,0 +1,13 @@
+/*
+  Localizable.strings
+  
+
+  Created by Daniel Gomes on 22/11/21.
+  
+*/
+
+"Login.Header.Label.title" = "Boas vindas,\nVocê está no Books.";
+"Login.Footer.Label.title" = "Digite seus dados para continuar.";
+"Login.Placeholder.email" = "E-mail";
+"Login.Placeholder.password" = "Password";
+"Login.Button.signIn" = "Entrar";

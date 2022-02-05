@@ -26,8 +26,11 @@
       location = "group:DI">
    </FileRef>
    <Group
-      location = "container:"
+      location = "group:Features"
       name = "Features">
+      <FileRef
+         location = "group:Login">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Books/Books.xcodeproj">

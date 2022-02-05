@@ -6,15 +6,31 @@
 //
 
 import UIKit
+import DI
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // MARK: - Properties
     var window: UIWindow?
+    var dependencyInjector: DependencyInjector?
+
+    private lazy var container: Container = {
+        return Container()
+    }()
 
     // MARK: - Methods
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: windowScene)
+        dependencyInjector = DependencyInjector(window: window, navigationController: UINavigationController())
+
+        dependencyInjector?.build(completion: { [unowned self] in
+            self.window = $1.window
+            self.container = $1.container
+            $1.start()
+        })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

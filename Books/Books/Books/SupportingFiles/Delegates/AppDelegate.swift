@@ -7,12 +7,42 @@
 
 import UIKit
 import CoreData
+import DI
+import Swinject
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properties
+    var window: UIWindow?
+    var dependencyInjector: DependencyInjector?
+
+    private lazy var container: Container = {
+        return Container()
+    }()
+
+    // MARK: - Methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        true
+
+        commonInit()
+
+        return true
+    }
+
+    private func commonInit() {
+        setupDependencyInjection()
+    }
+
+    private func setupDependencyInjection() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        dependencyInjector = DependencyInjector(window: window, navigationController: UINavigationController())
+
+        dependencyInjector?.build(completion: { _, appCoordinator in
+            self.window = appCoordinator.window
+            self.container = appCoordinator.container
+            appCoordinator.start()
+        })
     }
 
     // MARK: - UISceneSession Lifecycle
